@@ -24,18 +24,20 @@ function queryDb(query, res) {
     const header = {'Content-Type': 'application/json'};
 
     if (error) {
+      console.log(error.message);
       res.writeHead(400, header);
-    } else {
-      const body = JSON.stringify({
-        rows: result.rows,
-        rowCount: result.rowCount
-      });
-  
-      res.writeHead(200, header);
-      res.write(body);  
+      res.end();
+
+      return;
     }
-    
-    client.end();
+
+    const body = JSON.stringify({
+      rows: result.rows,
+      rowCount: result.rowCount
+    });
+  
+    res.writeHead(200, header);
+    res.write(body);  
     res.end();
   })
 }
