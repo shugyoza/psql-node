@@ -1,14 +1,22 @@
 {
-  "name": "mynodes",
+  "name": "psql-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Plain node.js and postgreSQL project. Minimum node.JS ver.20 for using .env file.",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file=.env index.js",
-    "dev": "nodemon index.js"
+    "start": "node --env-file=.env server.js",
+    "dev": "nodemon --env-file=.env server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "psql",
+    "node.js",
+    "postgres",
+    "pg",
+    "postgreSQL",
+    "javascript",
+    "JS"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
