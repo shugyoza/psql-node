@@ -24,6 +24,12 @@ const server = createServer((req, res) => {
   // const validRequest = checkApiKey(req, res, 'x-api-key');
   // if (!validRequest) return;
 
+  if (method === 'GET' && url === '/api/options/city') {
+    readSQLThenQueryDb('./db/sql/table_country-select-for_select_options.sql', res);
+
+    return;
+  }
+
   if (method === 'GET' && url === '/api/options/us_state/postal_abbr') {
     readSQLThenQueryDb('./db/sql/table_us_state-select_postal_abbr-for_select_options.sql', res);
 
