@@ -25,7 +25,7 @@ const server = createServer((req, res) => {
   // if (!validRequest) return;
 
   if (method === 'GET' && url === '/api/options/city') {
-    readSQLThenQueryDb('./db/sql/table_country-select-for_select_options.sql', res);
+    readSQLThenQueryDb('./db/sql/table_city-select-for_select_options.sql', res);
 
     return;
   }
