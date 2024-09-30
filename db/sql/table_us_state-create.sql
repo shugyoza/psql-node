@@ -5,4 +5,4 @@ CREATE TABLE
     postal_abbr VARCHAR(2) UNIQUE NOT NULL,
     fips_code VARCHAR(2) UNIQUE NOT NULL,
     last_update TIMESTAMP NOT NULL
-  )
+  );
